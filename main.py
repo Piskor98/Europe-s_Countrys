@@ -4,6 +4,9 @@ import csv
 import time
 import turtle
 from turtle import Turtle
+
+import pandas
+
 from title import Title
 from scoreboard import Scoreboard
 
@@ -40,7 +43,7 @@ answer_moving_setup()
 game=True
 
 # open data from csv file, read data, save as list
-with open("51 Europe Country.csv", "r") as f:
+with open("52 Europe Country.csv", "r") as f:
     data = csv.reader(f)
     rows = []
     for row in data:
@@ -67,6 +70,9 @@ while game:
 #Exit app
         if answer=='exit' or answer =='Exit':
             scoreboard.reset()
+            missing_country=[country for country in row]
+            new_data=pandas.DataFrame(missing_country)
+            new_data.to_csv('Country_to_learn.csv')
             screen.bye()
 
 
