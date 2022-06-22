@@ -1,4 +1,4 @@
-# Europe_Country
+# Europe's_Countrys
 
 Countries of Europe is a game I developed for children to learn the names of the countries that belong to Europe.
 To create project I used basic knowledge of Python, object-oriented programming and pandas library.
